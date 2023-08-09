@@ -1,0 +1,96 @@
+
+
+<body>
+
+
+
+<div class="container-fluid p-0 m-0">
+    <!-- Latest Movie -->
+
+    <div class="row mt-3 pt-2 "  >
+      <app-movie-trailer></app-movie-trailer>
+    </div>
+    
+  
+    <!-- Trending Movies -->
+    <div class="row mt-3 pt-2 "  style="background-color: black;">
+      <h6>Trending Movies</h6>
+      <div class="col-md-2 mt-3" *ngFor="let movie of trendingMovies?.results; let i = index">
+        <div class="card " *ngIf="i < 6" style="background-color: black;"  >
+          <img src="{{ movie.backdrop_path }}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{ movie.title }}</h5>
+            <p><span class="text-warning">Rating</span>: {{ movie.vote_average }}</p>
+            <p>Language<span class="p-1" style="background-color: rgb(255, 255, 255);"><b>{{ movie.original_language }}</b></span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    
+    <!-- Popular Movies -->
+    <div class="row mt-3 pt-2 "  style="background-color: black;" id="2">
+        <h6>Popular Movies</h6>
+        <div class="col-md-2 mt-3" *ngFor="let movie of popularMovies?.results; let i = index">
+          <div class="card " *ngIf="i < 6" style="background-color: black;"  >
+            <img src="{{ movie.backdrop_path }}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{ movie.title }}</h5>
+              <p><span class="text-warning">Rating</span>: {{ movie.vote_average }}</p>
+              <p>Language<span class="p-1" style="background-color: black;"><b>{{ movie.original_language }}</b></span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+   
+
+        <!-- Now Playing Movies -->
+     <div class="row mt-3 pt-2 "  style="background-color: black;" id="3">
+        <h6>Now Playing</h6>
+        <div class="col-md-2 mt-3" *ngFor="let movie of nowPlayingMovies?.results; let i = index">
+          <div class="card " *ngIf="i < 6" style="background-color: black;"  >
+            <img src="{{ movie.backdrop_path }}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{ movie.title }}</h5>
+              <p><span class="text-warning">Rating</span>: {{ movie.vote_average }}</p>
+              <p>Language<span class="p-1" style="background-color: black;"><b>{{ movie.original_language }}</b></span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+     <!-- Upcoming Movies -->
+     <div class="row mt-3 pt-2 "  style="background-color: black;" id="4">
+        <h6>Upcoming Movies</h6>
+        <div class="col-md-2 mt-3" *ngFor="let movie of upcomingMovies?.results; let i = index">
+          <div class="card " *ngIf="i < 6" style="background-color: black;"  >
+            <img src="{{ movie.backdrop_path }}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{ movie.title }}</h5>
+              <p><span class="text-warning">Rating</span>: {{ movie.vote_average }}</p>
+              <p>Language<span class="p-1" style="background-color: black;"><b>{{ movie.original_language }}</b></span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+       <!-- Upcoming Movies -->
+     <div class="row mt-3 pt-2 "  style="background-color: black;" id="5">
+        <h6>Originals Movies</h6>
+        <div class="col-md-2 mt-3" *ngFor="let movie of originals?.results; let i = index">
+          <div class="card " *ngIf="i < 6" style="background-color: black;"  >
+            <img src="{{ movie.backdrop_path }}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{ movie.title }}</h5>
+              <p><span class="text-warning">Rating</span>: {{ movie.vote_average }}</p>
+              <p>Language<span class="p-1" style="background-color: black;"><b>{{ movie.original_language }}</b></span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+  </div>
+  
+</body>

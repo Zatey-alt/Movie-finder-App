@@ -1,0 +1,42 @@
+
+<body>
+  
+
+<div class="divide">
+    <div class="image">
+    </div>
+    <div class="container">
+      <img src="/assets/logo.png" alt="Image description">
+      <form [formGroup]="signinForm" (ngSubmit)="Onsubmit()">
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>Email</mat-label>
+          <input matInput formControlName="email" type="email">
+          <mat-error *ngIf="email?.hasError('required')">
+            Email is required.
+          </mat-error>
+          <mat-error *ngIf="email?.hasError('email')">
+            Please enter the correct email format.
+          </mat-error>
+        </mat-form-field>
+  
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>Password</mat-label>
+          <input matInput formControlName="password" type="password">
+          <mat-error *ngIf="password?.hasError('required')">
+            Password is required.
+          </mat-error>
+          <mat-error *ngIf="password?.hasError('minlength')">
+            Password must be at least 6 characters long.
+          </mat-error>
+        </mat-form-field>
+  
+        <button type="submit">Sign In</button>
+        <nav>
+          <a routerLink="/forgot" routerLinkActive="active"><i>Forgot Password?</i></a>
+          <a routerLink="/register" routerLinkActive="active"><i>Register</i></a>
+        </nav>
+      </form>
+    </div>
+</div>
+</body>
+

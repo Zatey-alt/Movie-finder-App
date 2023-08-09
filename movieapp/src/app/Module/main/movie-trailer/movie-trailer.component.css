@@ -1,0 +1,16 @@
+.trailers{
+    width: 100%;
+    margin-top: 40px;
+}
+
+  
+@media screen and (max-width: 600px) {
+    iframe{
+        width: 100%;
+        height: 50%;
+    }
+    .trailers{
+        width: 100%;
+        margin-top: 30px;
+    }
+}
